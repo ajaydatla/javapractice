@@ -15,9 +15,9 @@ public class AsteriskTriangle {
       }
       System.out.print("*");
       for (int j = rows-i; j < rows+i; j++) {
-        System.out.print("*");
+        System.out.print(" ");
       }
-      System.out.println();
+      System.out.println("*");
     }
   }
 
