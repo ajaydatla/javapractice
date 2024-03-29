@@ -3,8 +3,22 @@ package com.test;
 public class AsteriskTriangle {
 
   public static void main(String[] args) {
-    int rows = 5; // Adjust this for the desired triangle size
-    printRightTriangle(rows);
+    int rows = 50; // Adjust this for the desired triangle size
+//    printRightTriangle(rows);
+    printTriangle(rows);
+  }
+
+  private static void printTriangle(int rows){
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < rows-i; j++) {
+        System.out.print(" ");
+      }
+      System.out.print("*");
+      for (int j = rows-i; j < rows+i; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
   }
 
   public static void printRightTriangle(int rows) {
