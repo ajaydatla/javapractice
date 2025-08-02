@@ -6,7 +6,7 @@ public class LongestSubstring {
     public static void main(String[] args) {
         String s = "tmmzuxt";
         HashMap<Character, Integer> map = new HashMap<>();
-        Integer length = 0;
+        Integer length = (Integer) 0;
         Integer longestLength = 0;
         for(int i = 0; i< s.length(); i ++){
             length++;
