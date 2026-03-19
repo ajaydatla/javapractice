@@ -2,14 +2,13 @@ package com.leetcode;
 
 public class MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
-        ListNode initial = null;
+        ListNode finalList;
+
         for (int i = 0; i < lists.length; i++) {
-            if(initial == null) initial = lists[i];
-            else if(initial.val > lists[i].val){
-                initial = lists[i];
-            }
+            finalList = new ListNode(lists[i].val);
         }
-        return initial;
+
+        return null;
     }
 }
 
