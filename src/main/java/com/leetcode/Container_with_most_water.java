@@ -6,21 +6,29 @@ import java.util.concurrent.ScheduledExecutorService;
 public class Container_with_most_water {
 
     public static void main(String[] args) {
-        int []height = {1,8,6,2,5,4,8,3,7};
-        Container_with_most_water cwmw = new Container_with_most_water();
+//        int []height = {1,8,6,2,5,4,8,3,7};
+        int []height = {2,3,4,5,18,17,6};
+        //difference between indices multiply by smaller of thier values
+        int waterAmount = 0;
+        int start=0, end = height.length-1;
+        for (int i = 0; i < height.length; i++) {
 
-        System.out.println(cwmw.maxArea(height));
+            waterAmount = getWaterAmount(height, start, end);
 
-        ScheduledExecutorService service = Executors.newScheduledThreadPool(2);
+            if(getWaterAmount(height, i, end) > waterAmount){
+                start = i;
+            }
+            if(getWaterAmount(height, start, i) > waterAmount){
+                end = i;
+            }
 
+        }
+        System.out.println(getWaterAmount(height, start, end));
     }
 
-    public int maxArea(int[] height) {
-        int area = 0;
-        int len = height.length;
-        int firstLine, lastLine, indexDiff = 0;
-
-        return area;
+    private static int getWaterAmount(int []height, int start, int end) {
+        return (end - start)*(Math.min(height[end], height[start]));
     }
+
 
 }

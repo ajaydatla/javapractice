@@ -1,0 +1,7 @@
+highest salary of employee department wise....
+
+employee  - id, name, salary, department_id
+department - department_id, name
+
+select max(salary), d.name from employee e left join department d on e.department_id = d.department_id
+group by d.name;

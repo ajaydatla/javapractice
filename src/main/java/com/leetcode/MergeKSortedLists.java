@@ -3,7 +3,7 @@ package com.leetcode;
 public class MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode finalList;
-
+//        LongAd
         for (int i = 0; i < lists.length; i++) {
             finalList = new ListNode(lists[i].val);
         }

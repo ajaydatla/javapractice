@@ -1,6 +1,7 @@
 package com.test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Testing23 {
 
@@ -13,6 +14,8 @@ public class Testing23 {
 
         Arrays.sort(arr1);
         Arrays.sort(arr2);
+
+        new HashMap<>();
 
         System.out.println(Arrays.equals(arr1,arr2));
     }
